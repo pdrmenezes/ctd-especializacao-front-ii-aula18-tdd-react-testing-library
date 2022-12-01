@@ -5,8 +5,17 @@ export type CardProps = {
   character: Character;
 };
 
-const Card: FC<CardProps> = ({ character }: CardProps) => {
-  return <div></div>;
+export const Card: FC<CardProps> = ({ character }: CardProps) => {
+  return (
+    <div>
+      <h1>{character.name}</h1>
+      {character.image !== null ? (
+        <>
+          <img src={character.image} alt={character.name} /> <p>{character.followers} followers</p>
+        </>
+      ) : (
+        <p>No followers yet</p>
+      )}
+    </div>
+  );
 };
-
-export default Card;

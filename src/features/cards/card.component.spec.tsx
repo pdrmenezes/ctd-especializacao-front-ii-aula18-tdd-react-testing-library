@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Card from "./card.component";
+import { Card } from "./card.component";
 import { Character } from "../../types/character.types";
 
 const CharacterDefault: Character = {
